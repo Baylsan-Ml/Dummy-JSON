@@ -39,9 +39,9 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
 
- /*  autoplay: {
-    deley:3000,
-  }, */
+  autoplay: {
+    deley:900,
+  },
 
   effect: 'fade',
   speed: 1500,

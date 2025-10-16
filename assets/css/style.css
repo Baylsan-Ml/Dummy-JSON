@@ -69,9 +69,12 @@ h4{
     box-shadow: 2px 2px 2px #7A90A8;
 /* background: linear-gradient(140deg,rgba(239, 234, 228, 1) 0%, rgba(49, 15, 16, 1) 20%, rgba(148, 114, 103, 1) 60%, rgba(49, 15, 16, 1) 100%);
  */}
-
+.navbar h3{
+    text-shadow: -1px 1px 1px var(--subColor1);
+    font-size: 20px;
+}
 .logo-img{
-    width: 10%;
+    width: 8%;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
@@ -117,19 +120,38 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
 .header-imgTop1{
     position: absolute;
     width: 15%;
-    left:0;
-    top: 0;
+    left:60px;
+    top: -30px;
 }
 .header-imgTop2{
     position: absolute;
-    width: 15%;
-    left:0px;
-    bottom:0px;
+    width: 13%;
+    right:70px;
+    bottom:60px;
+}
+.header-imgTop3{
+    position: absolute;
+    width: 19%;
+    left:15px;
+    bottom:65px;
+}
+.header-imgTop4{
+    position: absolute;
+    width: 15.5%;
+    right:123px;
+    top:110px;
+}
+.header-imgTop5{
+    position: absolute;
+    width: 17%;
+    right:65px;
+    top:7px;
 }
 .header-title{
     position: absolute;
     top:200px;
-
+    background-color: #FEEB9F;
+    text-shadow: -1px 2px 2px var(--subColor);
 }
 .header-description{
     position: absolute;
