@@ -39,7 +39,7 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
 
-  /* autoplay: {
+ /*  autoplay: {
     deley:3000,
   }, */
 
@@ -58,7 +58,7 @@ const getCategory= async()=>{
   if (response.status ==200)
       return response;
 }
-getCategory();
+
 const displayCategory= async()=>{
   const response=await getCategory();
 
@@ -72,3 +72,7 @@ const displayCategory= async()=>{
 }
 displayCategory();
 /* Home-Categories end */
+
+
+
+

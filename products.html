@@ -14,8 +14,6 @@
 </head>
 
 <body>
-    
-<header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky sticky-top top-0">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Dummy JSON</a>
@@ -55,24 +53,84 @@
       </form>
     </div>
   </div>
-</nav></header>
+</nav>  
+<header>
+    <section class="ProdHero d-flex justify-content-center align-items-center">
+      <h1>Products</h1>
+    </section>
+</header>
 <main>
 
   <section>
-    <h1 class="text-center">Products</h1>
     <div class="container">
       <div class="search">
         <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn navBtn" type="submit">Search</button>
+        <input class="form-control me-2 search-input" type="search" name="search-input" id="search-input" placeholder="Search.." aria-label="Search"/>
+        <button class="btn navBtn" type="button">Search</button>
       </form>
       </div>
       <div class="sort">
-        <h2>Sort by:</h2>
+        <select class="sort-select form-select w-25 my-3 bg-subColor2 subColor1">
+        <option value="" class="sort-option bg-subColor2">Sort by</option>
+        <option value="" class="sort-option bg-subColor2">Title:</option>
+        <option value="title-asc" class="bg-subColor1 subColor">[A → Z]</option>
+        <option value="title-desc" class="bg-subColor1 subColor">[Z → A]</option>
+        <option value="" class="sort-option bg-subColor2">Price:</option>
+        <option value="price-asc" class="bg-subColor1 subColor">[Low → High]</option>
+        <option value="price-desc" class="bg-subColor1 subColor">[High → Low]</option>
+</select>
       </div>
     </div>
   </section>
 
+  <section class="createProduct d-flex justify-content-center">
+    
+     <div class="createProduct d-flex justify-content-center">
+        <button type="button" class="btn add-new-btn bg-mainColor subColor1 mb-5 fw-bold =">Create New Product</button>
+       
+        <div class="createNewProdModal rounded">
+          <div class="modal-content costume-modal-content rounded p-4">
+            <div class="modal-header border-bottom mb-4">
+          <i class="fa-solid fa-x fa-lg close_btn" style="color: #000000;"></i>
+          <h3 class="modal-title ">New Product</h3>
+          </div>
+          <div class="input-group flex-nowrap mb-2">
+          <span class="input-group-text bg-subColor3 text-light " id="addon-wrapping">Product Title</span>
+        <input type="text" class="form-control prodTitle" placeholder="Product Title" aria-label="Product Title" aria-describedby="addon-wrapping">
+           </div>
+             <input type="text" id="prodBrand" class="form-control mb-2 prodBrand" placeholder="Brand">
+              <input type="number" id="prodPrice" class="form-control mb-2 proddPrice" placeholder="Price">
+              <input type="number" id="prodStock" class="form-control mb-2 prodStock" placeholder="Stock">
+             <input type="text" id="prodCategory" class="form-control mb-2 prodCategory" placeholder="Category">
+
+             <div class="form-floating mb-3">
+             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+             <label for="floatingTextarea" class="mb-2 prodDescription">Product Description</label>
+             <label  for="floatingInput" class="prodDescription">Product Description</label>
+       </div>
+          <label for="inputGroupFile04" class="mb-2">Product Photos</label>
+          <div class="input-group mb-2">
+          <input type="file" class="form-control prodImages" id="inputGroupFile04" multiple>
+          <label class="btn upload-btn text-black bg-mainColor" for="inputGroupFile04">Upload</label>
+</div>
+         
+           <div class="modal-footer mt-4 border-top">
+           <button type="button" class="btn close-btn mt-2 w-25 me-2 subColor1 bg-subColor">Close</button>
+           <button type="button" class="btn save-btn mt-2 w-50 subColor1 bg-subColor3">Save Changes</button>
+           </div>
+
+        </div>
+        </div>
+
+        </div>
+        
+  </section>
+
+<section class="deleteProduct">
+  <div class="deleteProduct d-flex justify-content-center">
+    <button type="button" class="btn deleteBtn bg-subColor3 subColor1 mb-5 fw-bold =">Delete Product</button>
+    </div>
+  </section>
     <section class="products">
         <div class="container">
             <div class="row productsContent">
@@ -82,14 +140,106 @@
         </div>
     </section>
     
+
+
+
+    <!-- pagination -->
 <nav aria-label="Page navigation example">
   <ul class="pagination d-flex justify-content-center my-3">
 
   </ul>
 </nav>
 </main>
-<footer></footer>
 
+
+
+<footer class="footer bg-mainColor">
+<div class="footer-bg"></div>
+<div class="footer-content">
+      <div class="container">
+        <div class="row d-flex ">
+          <div class="upper-side d-flex ">
+          <div class="col-md-4">
+            <div class=" d-flex flex-column align-items-center mb-5 pt-3"> 
+          <h2 class="py-2 subColor1">Cherry Store</h2>
+          <p class="footer-para subColor p-3 rounded">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facilis adipisci beatae autem dignissimos facere placeat. Tempora quis eligendi ab?
+          </p>
+        </div>
+        </div>
+         <div class="col-md-4">
+            <div class=" d-flex flex-column align-items-center mb-5 pt-3">
+          <h2 class="py-2 subColor">Support</h2>
+          <a href="#" class="subColor1">FAQ's</a>
+
+
+          <div class="sm text-center mt-5 border-top ">
+          <h3 class="pt-3 subColor1">Follow us</h3>
+          <ul class="sm d-flex gap-3 py-3">
+            <li class=""><i class="fa-brands fa-instagram fa-2xl d-flex justify-content-start" style="color: #efeae4;"></i></li>
+            <li class=""><i class="fa-brands fa-square-facebook fa-2xl d-flex justify-content-start" style="color: #efeae4;"></i></li>
+            <li class=""><i class="fa-brands fa-whatsapp fa-2xl d-flex justify-content-start" style="color: #efeae4;"></i></li>
+            <!--  <li><i class="fa-brands fa-square-whatsapp fa-2xl" style="color: #efeae4;"></i></li> -->
+          </ul>
+         </div>
+        </div>
+        </div>
+         <div class="col-md-4">
+            <div class=" d-flex flex-column align-items-center mb-5 pt-3">
+          <h2 class="py-2 subColor1">Subscribe</h2>
+          <form class="d-flex gap-2">
+           <div class="mb-3">
+            <div class="form-floating">
+           <input type="email" class="form-control bg-subColor1" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput" class="subColor">Email address</label>
+            </div>
+         <div id="emailHelp" class="form-text subColor">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="footerBtn">
+          <button type="submit" class="btn bg-subColor1 subColor footerSubmit">Submit</button>
+        </div>
+         </form>
+
+         
+        </div>
+        </div>
+        </div>
+        <div class="down-side d-flex flex-column  align-items-center border-top">
+            <h2 class=" pt-3 subColor">Get in Touch</h2>
+            <div class="container">
+              <div class="row text-center subColor my-3">
+                <div class="col-md-4 d-flex justify-content-center">
+                  <i class="fa-solid fa-location-dot fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
+                  <div class="contact-info ">
+                  <h4 class="">Find us</h4>
+                  <address class="">Honololo, neverland st. building no.13</address>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center ">
+                  <i class="fa-solid fa-phone fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
+                  <div class="contact-info">
+                  <h4>Call us</h4>
+                  <span>+0009333111</span>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                  <i class="fa-solid fa-envelope fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
+                  <div class="contact-info">
+                 <h4>Mail us</h4>
+                 <span>dummyjson@gmail.com</span>
+                 </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      
+        
+        
+      </div>
+          </div>
+          </div>
+          
+    </footer>
 
 
 

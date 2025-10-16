@@ -20,44 +20,74 @@
     
 <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky sticky-top top-0">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dummy JSON</a>
+    <a class="navbar-brand subColor1 d-flex gap-1" href="#">
+      <h3 class="d-flex align-items-center">Cherry 
+        <img src="./assets/imgs/cherry-removebg-preview.png" class="logo-img" alt="Cherry Logo">
+        Store</h3>
+
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#homeProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
           <ul class="dropdown-menu bg-subColor1">
-            <li><a class="dropdown-item" href="#">beauty</a></li>
-            <li><a class="dropdown-item" href="#">furniture</a></li>
-            <li><a class="dropdown-item" href="#">groceries</a></li>
-            <li><a class="dropdown-item" href="#">laptops</a></li>
-            <li><a class="dropdown-item" href="#">womens-dresses</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">beauty</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">furniture</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">groceries</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">laptops</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">womens-dresses</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">All Catogories</a></li>
+            <li><a class="dropdown-item" href="./products.html">All Products</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cart</a>
+          <a class="nav-link" href="#homeFAQ">FAQ's</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact us</a>
+          <a class="nav-link" href="#footer">Contact us</a>
         </li>
         
       </ul>
-      <form class="d-flex" role="search">
+
+     
+      <ul class="navbar-nav d-flex gap-3 me-2">
+        <li class="nav-item">
+          <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #920001;"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-cart-shopping fa-lg" style="color: #920001;"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-heart fa-lg" style="color: #920001;"></i>
+        </li>
+         <li class="nav-item">
+            <i class="fa-solid fa-user fa-lg" style="color: #920001;"></i>
+        </li>
+      </ul>
+      
+
+      
+
+
+      <!-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn navBtn" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </nav>
+
+
+
+
 
 
 <header>
@@ -67,8 +97,10 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide"><img src="./assets/imgs/kk.jpg" class="header-img w-100" alt="..">
-      <h1 class="header-title">Dummy JSON</h1>
+    <div class="swiper-slide"><img src="./assets/imgs/headerr.jpg" class="header-img w-100" alt="..">
+      <img src="./assets/imgs/hangingsofa.png" class="header-imgTop1" alt="">
+      <img src="./assets/imgs/purf.png" class="header-imgTop2" alt="">
+      <h1 class="header-title">Cherry Store</h1>
       <p class="header-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, libero!</p>
     </div>
     <div class="swiper-slide"><img src="./assets/imgs/laptops.jpg" class="w-100" alt=".."></div>
@@ -76,7 +108,7 @@
     <div class="swiper-slide"><img src="./assets/imgs/sofa1.jpg" class="w-100" alt=".."></div>
     <div class="swiper-slide"><img src="./assets/imgs/beauty1.jpg" class="w-100" alt=".."></div>
     <div class="swiper-slide"><img src="./assets/imgs/groceries2.jpg" class="w-100" alt=".."></div>
-    <div class="swiper-slide"><img src="./assets/imgs/" class="w-100" alt=".."></div>
+    <div class="swiper-slide"><img src="./assets/imgs/groceries1.jpg" class="w-100" alt=".."></div>
     ...
   </div>
   <!-- If we need pagination -->
@@ -91,32 +123,78 @@
 </section>  
 </header>
 
+<main class="">
 
-<main class="d-flex gap-5">
-  <section class="category py-3 text-center ps-3">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-2 d-flex justify-content-center">
+  <section class="category py-3 text-center " id="homeCategory">
   <h2 class="my-5 subColor">All Categories</h2>
   <ul class="list-group list-group-flush categoryList">
     
 </ul>
 </section>
-
-<section class="homeProducts py-3">
-  <h2 class="my-5 text-center subColor">Products</h2>
+</div>
+<div class="col-md-10 d-flex justify-content-center">
+<section class="homeProducts py-3" id="homeProducts">
+  <h2 class="mt-5 text-center subColor">Products</h2>
    <div class="container-fluid">
     <div class="row">
       <div class="col-md-11 homeProductsCard d-flex justify-content-center flex-wrap gap-3">
          </div>
     </div>
   </div>
-  <div  class="text-center my-5"><a href="./products.html" target="_blank">See more..</a></div>
+  <div  class="text-center my-5"><a href="./products.html" class="seeMore subColor3 rounded" target="_blank">See more..</a></div>
 </section>
+</div>
+<div class="col-md-6 d-flex justify-content-center">
+<section class="homeFAQ pb-5 w-100" id="homeFAQ">
+  <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Q: How can I order
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p><strong>A: You can order easily using our online platform.</strong> When you find a product you need, you can add it to cart, login and go through the ordering process. After the order is ready, you will receive order summary to your email. Order summary will also be stored to your account.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Q: What payment methods can I use?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>A: You can use all the major credit cards.</strong> 
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Q: How to contact customer service?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>A: If you have question regarding our online store (ordering, account questions, technical questions), please contact onlineSotre@Cherry.co </p>
+       <p>On pricing and shipping related issues you can contact customer support at onlineSotre@Cherry.co or call +0009333111</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+</div>
+</div>
 
 </main>
 
-
-
-
-<footer class="footer bg-mainColor">
+<footer class="footer bg-mainColor" id="footer">
 <div class="footer-bg"></div>
 <div class="footer-content">
       <div class="container">
@@ -124,8 +202,9 @@
           <div class="upper-side d-flex ">
           <div class="col-md-4">
             <div class=" d-flex flex-column align-items-center mb-5 pt-3"> 
-          <h2 class="py-2 subColor1">Dummy JSON</h2>
-          <p class="subColor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ab! Commodi quas nisi sapiente illum natus libero accusantium totam laudantium consequatur autem. Voluptatibus, alias ea similique deserunt omnis, impedit architecto dolor, unde sunt rem recusandae blanditiis incidunt dolorem repellendus ratione repellat quasi provident exercitationem laboriosam obcaecati temporibus commodi molestias! Error.</p>
+          <h2 class="py-2 subColor1">Cherry Store</h2>
+          <p class="footer-para subColor p-3 rounded">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facilis adipisci beatae autem dignissimos facere placeat. Tempora quis eligendi ab?
+          </p>
         </div>
         </div>
          <div class="col-md-4">
@@ -134,7 +213,7 @@
           <a href="#" class="subColor1">FAQ's</a>
 
 
-          <div class="sm text-center mt-5 border-top">
+          <div class="sm text-center mt-5 border-top ">
           <h3 class="pt-3 subColor1">Follow us</h3>
           <ul class="sm d-flex gap-3 py-3">
             <li class=""><i class="fa-brands fa-instagram fa-2xl d-flex justify-content-start" style="color: #efeae4;"></i></li>
@@ -156,7 +235,9 @@
             </div>
          <div id="emailHelp" class="form-text subColor">We'll never share your email with anyone else.</div>
         </div>
-         <button type="submit" class="btn bg-subColor1 footerBtn">Submit</button>
+        <div class="footerBtn">
+          <button type="submit" class="btn bg-subColor1 subColor footerSubmit">Submit</button>
+        </div>
          </form>
 
          
@@ -171,7 +252,7 @@
                   <i class="fa-solid fa-location-dot fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
                   <div class="contact-info ">
                   <h4 class="">Find us</h4>
-                  <address class="">Honololo, neverland st. building no.13</address>
+                  <address class="">Honololo, neverland st. building no.313</address>
                   </div>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center ">
@@ -185,7 +266,7 @@
                   <i class="fa-solid fa-envelope fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
                   <div class="contact-info">
                  <h4>Mail us</h4>
-                 <span>dummyjson@gmail.com</span>
+                 <span>onlineSotre@Cherry.co</span>
                  </div>
                 </div>
               </div>
@@ -200,7 +281,6 @@
           </div>
           
     </footer>
-
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
