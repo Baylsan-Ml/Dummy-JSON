@@ -171,10 +171,6 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
     top:7px;
 }
 @media screen and (max-width:1500px){
-    .header-title{
-        position: absolute;
-        top:0px;
-    }
     .header-imgTop1{
     width: 10%;
     left:90px;
@@ -202,16 +198,256 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
 }
     
 }
+ 
+@media screen and (max-width:1305px){
+.header-imgTop3{
+    width: 13%;
+    left:90px;
+    bottom:50px;
+}
+.header-imgTop4{
+    width: 13%;
+    right:138px;
+    top:20px;
+}
+.header-imgTop5{
+    width: 11%;
+    right:55px;
+    top:5px;
+}
+    
+}
+@media screen and (max-width:1209px){
+    .header-imgTop1{
+    width: 12%;
+    left:90px;
+    top: -30px;
+}
+.header-imgTop2{
+    width: 10%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 13%;
+    left:90px;
+    bottom:40px;
+}
+.header-imgTop4{
+    width: 13%;
+    right:128px;
+    top:30px;
+}   
+}
+@media screen and (max-width:1100px){
+    .header-imgTop1{
+    width: 13%;
+    left:60px;
+    top: -30px;
+}
+.header-imgTop2{
+    width: 10%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 15%;
+    left:60px;
+    bottom:40px;
+}
+.header-imgTop4{
+    width: 13%;
+    right:118px;
+    top:40px;
+}
+.header-imgTop5{
+    width: 11%;
+    right:55px;
+    top:15px;
+}
   
+}
+@media screen and (max-width:1080px){
+    .header-imgTop1{
+    width: 13%;
+    left:60px;
+    top: -30px;
+}
+.header-imgTop2{
+    width: 13%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 17%;
+    left:55px;
+    bottom:40px;
+}
+.header-imgTop4{
+    width: 13%;
+    right:113px;
+    top:50px;
+}
+.header-imgTop5{
+    width: 13%;
+    right:50px;
+    top:15px;
+}
+  
+}
+@media screen and (max-width:1000px){
+    .header-imgTop1{
+    width: 15%;
+    left:50px;
+    top: -30px;
+}
+.header-imgTop4{
+    width: 13%;
+    right:105px;
+    top:50px;
+}
+}
+@media screen and (max-width:970px){
+   
+.header-imgTop2{
+    width: 15%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 17%;
+    left:35px;
+    bottom:40px;
+}
+.header-imgTop4{
+    display: none;
+}
+.header-imgTop5{
+    width: 16%;
+    right:50px;
+    top:10px;
+}
+  
+}
+@media screen and (max-width:960px){
+ .header-imgTop1{
+    width: 15%;
+    right:80px;
+    bottom:45px;
+}  
+.header-imgTop2{
+    width: 15%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 18%;
+    left:35px;
+    bottom:40px;
+}
+.header-imgTop4{
+    display: none;
+}
+.header-imgTop5{
+    width: 16%;
+    right:50px;
+    top:10px;
+}
+  
+}
+@media screen and (max-width:944px){
+ .header-imgTop1{
+    width: 15%;
+    right:80px;
+    bottom:45px;
+}  
+.header-imgTop2{
+    width: 15%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 19%;
+    left:25px;
+    bottom:45px;
+}
+.header-imgTop4{
+    display: none;
+}
+
+}
+@media screen and (max-width:900px){
+ .header-imgTop1{
+    display: none;
+}  
+.header-imgTop2{
+    width: 15%;
+    right:75px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 20%;
+    left:10px;
+    bottom:45px;
+}
+.header-imgTop4{
+    display: none;
+}
+
+}
+@media screen and (max-width:790px){
+  
+.header-imgTop2{
+    width: 13%;
+    right:70px;
+    bottom:45px;
+}
+.header-imgTop3{
+    width: 19%;
+    left:17px;
+    bottom:45px;
+}
+
+}
 .header-title{
     position: absolute;
     top:200px;
     background-color: #FEEB9F;
     text-shadow: -1px 2px 2px var(--subColor);
 }
+@media screen and (max-width:1305px){
+    .header-title{
+        top:150px;
+    }
+}
+@media screen and (max-width:1209px){
+    .header-title{
+        top:150px;
+    }
+}
+@media screen and (max-width:1100px){
+    .header-title{
+        top:150px;
+    }
+}
 .header-description{
     position: absolute;
-    top:320px;
+    top:360px;
+}
+@media screen and (max-width:1305px){
+    .header-description{
+        top:190px;
+    }
+}
+@media screen and (max-width:1209px){
+    .header-description{
+        top:190px;
+    }
+}
+@media screen and (max-width:1100px){
+    .header-description{
+        top:190px;
+    }
 }
 
 .categoryList li:hover{
@@ -266,6 +502,17 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
 .footerSubmit:hover{
     background-color: var(--subColor);
     color: var(--subColor1);
+}
+
+@media screen and (max-width:1200px){
+    .footerSubmit{
+        height: 48%;
+    }
+}
+@media screen and (max-width:770px){
+    .footerSubmit{
+        height: 41%;
+    }
 }
 .footer-bg{
     background-image: url(../imgs/Cherr.png);
