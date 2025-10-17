@@ -368,3 +368,24 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
     box-shadow: -2px 2px 1px var(--subColor2);
 }
 /* Categories Page end */
+
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--subColor);
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--subColor);
+}
+
+.desCard{
+    height: fit-content;
+    margin-top: 70px;
+}
+
+.prodDetail-tilte{
+     text-shadow: 1px 1px 1px var(--subColor3);
+    font-family: var(--mainFont);
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

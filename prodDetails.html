@@ -15,61 +15,133 @@
 
 <body>
     
-<header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky sticky-top top-0">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky sticky-top top-0">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dummy JSON</a>
+    <a class="navbar-brand subColor1 d-flex gap-1" href="#">
+      <h3 class="d-flex align-items-center subColor3">Cherry 
+        <img src="./assets/imgs/cherry-removebg-preview.png" class="logo-img" alt="Cherry Logo">
+        Store</h3>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+      <ul class="navbar-nav ms-5 mb-2 mb-lg-0 m-auto gap-1 ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#homeProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
           <ul class="dropdown-menu bg-subColor1">
-            <li><a class="dropdown-item" href="#">beauty</a></li>
-            <li><a class="dropdown-item" href="#">furniture</a></li>
-            <li><a class="dropdown-item" href="#">groceries</a></li>
-            <li><a class="dropdown-item" href="#">laptops</a></li>
-            <li><a class="dropdown-item" href="#">womens-dresses</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">beauty</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">furniture</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">groceries</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">laptops</a></li>
+            <li><a class="dropdown-item" href="#homeCategory">womens-dresses</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">All Catogories</a></li>
+            <li><a class="dropdown-item" href="./products.html">All Products</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cart</a>
+          <a class="nav-link" href="#homeFAQ">FAQ's</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact us</a>
+          <a class="nav-link" href="#footer">Contact us</a>
         </li>
         
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn navBtn" type="submit">Search</button>
-      </form>
+      <ul class="navbar-nav d-flex gap-3 me-2">
+        <li class="nav-item d-flex justify-content-center gap-2 align-items-center">
+          <input type="text" name="search.." id="search" class="form-control w-75 d-none navSearchInput">
+          <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #920001;"></i>
+        </li>
+         <li class="nav-item">
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+            <i class="fa-solid fa-cart-shopping fa-lg" style="color: #920001;"></i>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas" aria-controls="wishlistOffcanvas">
+            <i class="fa-solid fa-heart fa-lg" style="color: #920001;"></i>
+          </button>
+        </li>
+         <li class="nav-item">
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#userOffcanvas" aria-controls="userOffcanvas">
+            <i class="fa-solid fa-user fa-lg" style="color: #920001;"></i>
+          </button>  
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
+
+
+<!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end bg-subColor1" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title mainFont subColor3" id="cartOffcanvasLabel">
+      <i class="fa-solid fa-cart-shopping fa-lg" style="color: #920001;"></i>
+      Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="subFont subColor">No Items Yet..</p>
+  </div>
+</div>
+<!-- Cart Offcanvas End-->
+
+<!-- Wishlist Offcanvas -->
+<div class="offcanvas offcanvas-end bg-subColor1" tabindex="-1" id="wishlistOffcanvas" aria-labelledby="wishlistOffcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title mainFont subColor3" id="wishlistOffcanvas">
+      <i class="fa-solid fa-heart fa-lg" style="color: #920001;"></i>
+      Wish List</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="subFont subColor">No Items Yet..</p>
+  </div>
+</div>
+<!-- Wishlist Offcanvas End-->
+
+<!-- User Offcanvas -->
+<div class="offcanvas offcanvas-end bg-subColor1" tabindex="-1" id="userOffcanvas" aria-labelledby="userOffcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title mainFont subColor3" id="userOffcanvas">
+      <i class="fa-solid fa-user fa-lg" style="color: #920001;"></i>
+      Profile</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex justify-content-center">
+    <img src="./assets/imgs/user.png" class="w-25 m-auto" alt="user-img">
+  </div>
+</div>
+<!-- User Offcanvas End-->
+
+
+
+<header>
+
 </header>
 <main>
     <section class="prodDetails">
+      <h1 class="prodDetail-tilte text-center">Product Details</h1>
         <div class="container">
             <div class="row d-flex">
-            <div class="prodDetailsContent ">
+            <div class="prodDetailsContent d-flex flex-wrap justify-content-center">
+              
             </div>
             </div>
         </div>
     </section>
-    
+
+   
 
 </main>
-<footer class="footer bg-mainColor">
+<footer class="footer bg-mainColor" id="footer">
 <div class="footer-bg"></div>
 <div class="footer-content">
       <div class="container">
@@ -77,17 +149,18 @@
           <div class="upper-side d-flex ">
           <div class="col-md-4">
             <div class=" d-flex flex-column align-items-center mb-5 pt-3"> 
-          <h2 class="py-2 subColor1">Dummy JSON</h2>
-          <p class="subColor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ab! Commodi quas nisi sapiente illum natus libero accusantium totam laudantium consequatur autem. Voluptatibus, alias ea similique deserunt omnis, impedit architecto dolor, unde sunt rem recusandae blanditiis incidunt dolorem repellendus ratione repellat quasi provident exercitationem laboriosam obcaecati temporibus commodi molestias! Error.</p>
+          <h2 class="py-2 subColor1">Cherry Store</h2>
+          <p class="footer-para subColor p-3 rounded subFont1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facilis adipisci beatae autem dignissimos facere placeat. Tempora quis eligendi ab?
+          </p>
         </div>
         </div>
          <div class="col-md-4">
             <div class=" d-flex flex-column align-items-center mb-5 pt-3">
           <h2 class="py-2 subColor">Support</h2>
-          <a href="#" class="subColor1">FAQ's</a>
+          <a href="#homeFAQ" class="subColor1 subFont1">FAQ's</a>
 
 
-          <div class="sm text-center mt-5 border-top">
+          <div class="sm text-center mt-5 border-top ">
           <h3 class="pt-3 subColor1">Follow us</h3>
           <ul class="sm d-flex gap-3 py-3">
             <li class=""><i class="fa-brands fa-instagram fa-2xl d-flex justify-content-start" style="color: #efeae4;"></i></li>
@@ -105,11 +178,13 @@
            <div class="mb-3">
             <div class="form-floating">
            <input type="email" class="form-control bg-subColor1" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput" class="subColor">Email address</label>
+            <label for="floatingInput" class="subColor subFont1">Email address</label>
             </div>
-         <div id="emailHelp" class="form-text subColor">We'll never share your email with anyone else.</div>
+         <div id="emailHelp" class="form-text subColor subFont1">We'll never share your email with anyone else.</div>
         </div>
-         <button type="submit" class="btn bg-subColor1 footerBtn">Submit</button>
+        <div class="footerBtn">
+          <button type="submit" class="btn bg-subColor1 subColor footerSubmit subFont1">Submit</button>
+        </div>
          </form>
 
          
@@ -123,22 +198,22 @@
                 <div class="col-md-4 d-flex justify-content-center">
                   <i class="fa-solid fa-location-dot fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
                   <div class="contact-info ">
-                  <h4 class="">Find us</h4>
-                  <address class="">Honololo, neverland st. building no.13</address>
+                  <h4 class="subFont">Find us</h4>
+                  <address class="subFont1">Honololo, neverland st. building no.313</address>
                   </div>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center ">
                   <i class="fa-solid fa-phone fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
                   <div class="contact-info">
-                  <h4>Call us</h4>
-                  <span>+0009333111</span>
+                  <h4 class="subFont">Call us</h4>
+                  <span class="subFont1">+0009333111</span>
                   </div>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center">
                   <i class="fa-solid fa-envelope fa-2xl d-flex align-items-center" style="color: #48596b;"></i>
                   <div class="contact-info">
-                 <h4>Mail us</h4>
-                 <span>dummyjson@gmail.com</span>
+                 <h4 class="subFont">Mail us</h4>
+                 <span class="subFont1">onlineSotre@Cherry.co</span>
                  </div>
                 </div>
               </div>
