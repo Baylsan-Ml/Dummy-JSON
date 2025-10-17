@@ -614,6 +614,9 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
     text-shadow: -1px 1px 1px var(--subColor);
     box-shadow: -2px 2px 1px var(--subColor2);
 }
+.category .categoryContent h5{
+    height: 48px;
+}
 /* Categories Page end */
 
 
