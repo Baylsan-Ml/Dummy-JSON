@@ -1,12 +1,17 @@
 const getProducts=async()=>{
-    const response= await axios.get(`https://dummyjson.com/products?limit=10`);
-    /* console.log(response.data); */
-    if(response.status==200)
-        return response;
+     try {
+    const response = await axios.get(`https://dummyjson.com/products?limit=10`);
+    if (response.status == 200) return response;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return null;
+  }
 }
 getProducts();
 const displayProducts=async()=>{
-    const response= await getProducts();
+   try {
+    const response = await getProducts();
+    if (!response) return;
     Products = response.data.products;
     const result= response.data.products.map(product=>`
         <div class="card -d-flex  flex-column" style="width: 18rem;">
@@ -28,8 +33,12 @@ const displayProducts=async()=>{
      
         `
     ).join (' ');
-    document.querySelector(".homeProductsCard").innerHTML=result;
-} 
+  
+  document.querySelector(".homeProductsCard").innerHTML=result;
+   }catch (error) {
+    console.error("Error displaying products:", error);
+  }
+};
  displayProducts();
 
 /* swiper init code */
@@ -58,15 +67,20 @@ const swiper = new Swiper('.swiper', {
 
 /* Home-Categories start */
 const getCategory= async()=>{
-  const response= await axios.get('https://dummyjson.com/products/category-list');
-  /* console.log(response); */
-  if (response.status ==200)
-      return response;
+   try {
+    const response = await axios.get('https://dummyjson.com/products/category-list');
+    if (response.status == 200) return response;
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+    return null;
+  }
 }
 
 const displayCategory= async()=>{
-  const response=await getCategory();
-
+  try {
+    const response = await getCategory();
+    if (!response) return;
+    
   const result= response.data.map(category=>`
     <li class="list-group-item d-flex justify-content-center rounded">
     <a href="./category.html?category=${category}" class='btn btn-outline subColor2' target="_blanck">${category}</a>
@@ -74,7 +88,10 @@ const displayCategory= async()=>{
     `).join (' ');
 
     document.querySelector(".categoryList").innerHTML=result;
-}
+ } catch (error) {
+    console.error("Error displaying categories:", error);
+  }
+};
 displayCategory();
 /* Home-Categories end */
 
