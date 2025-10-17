@@ -29,3 +29,18 @@ const displayCategory = async () => {
     document.querySelector(".categoryContent").innerHTML=result;
 } 
 displayCategory();
+
+
+
+/* Nav Btns */
+const navSearchBtn=document.querySelector(".fa-magnifying-glass");
+const navCartBtn=document.querySelector(".fa-cart-shopping");
+const navHeartBtn=document.querySelector(".fa-heart");
+const navUserBtn=document.querySelector(".fa-user");
+const offcanvasCart=document.querySelector(".offcanvasCart");
+
+navSearchBtn.addEventListener("click", ()=>{
+   navSearchInput.classList.remove('d-none');
+})
+
+/* Nav Btns */

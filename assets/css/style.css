@@ -219,7 +219,7 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
     color: var(--subColor1);
     background-color: var(--subColor2);
 }
-.categoryList a:hover{
+.categoryList li a:hover{
     color: var(--subColor1);
 }
 
@@ -228,6 +228,13 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
 }
 .homeProductsCard img{
     height: 286px;
+}
+.homeProducts .wishBtn:hover{
+    background-color: var(--subColor2);
+}
+.homeProducts .cartBtn:hover{
+    background-color: var(--subColor2);
+    color: var(--subColor1);
 }
 .seeMore{
     text-shadow: -1px 1px 1px var(--mainColor);
@@ -347,9 +354,17 @@ box-shadow: 0 0 0 .25rem #AFCAE8;
 
 }
 /* Create Prod Modal */
-
-
-
 /* Products Page end */
 
-
+/* Categories Page start */
+.CatHero{
+    background-image: url(../imgs/cherryy.jpg);
+    height: 80vh;
+    background-position: center;
+    background-size: contain;
+}
+.CatHero-title{
+    text-shadow: -1px 1px 1px var(--subColor);
+    box-shadow: -2px 2px 1px var(--subColor2);
+}
+/* Categories Page end */

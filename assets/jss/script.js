@@ -19,8 +19,8 @@ const displayProducts=async()=>{
     ${product.rating}</span>
     </div>
     <div class="cartBtn-heartBtn d-flex gap-2 mt-3 subFont">
-    <button class='btn bg-subColor1'><i class="fa-solid fa-heart fa-lg" style="color: #920001;"></i></button>
-    <button class='btn bg-subColor1 subColor3 flex-grow-1'><i class="fa-solid fa-cart-shopping fa-lg" style="color: #920001;"></i> Add to Cart</button>
+    <button class='btn bg-subColor1 wishBtn'><i class="fa-solid fa-heart fa-lg" style="color: #920001;"></i></button>
+    <button class='btn bg-subColor1 subColor3 flex-grow-1 cartBtn'><i class="fa-solid fa-cart-shopping fa-lg" style="color: #920001;"></i> Add to Cart</button>
     </div>
     <a href="./prodDetails.html?prodID=${product.id}" class="btn prodBtn w-100 mt-2 subColor1 bg-mainColor subFont" target="_blank">Details</a>
   </div>
@@ -69,7 +69,7 @@ const displayCategory= async()=>{
 
   const result= response.data.map(category=>`
     <li class="list-group-item d-flex justify-content-center rounded">
-    <a href="./category.html?category=${category}" class='btn btn-outline' target="_blanck">${category}</a>
+    <a href="./category.html?category=${category}" class='btn btn-outline subColor2' target="_blanck">${category}</a>
     </li>
     `).join (' ');
 
